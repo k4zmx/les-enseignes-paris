@@ -1,0 +1,565 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Les Enseignes">
+
+  <!-- CALL BAR -->
+  <div class="call-bar">
+    <div class="call-bar__inner">
+      <span class="call-bar__segment md-only">Devis gratuit sous 24h</span>
+      <span class="call-bar__sep md-only"></span>
+      <a href="tel:+33123456789" class="call-bar__phone">☎ 01 23 45 67 89</a>
+      <span class="call-bar__sep md-only"></span>
+      <span class="call-bar__segment md-only">Paris &amp; Île-de-France</span>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="navbar">
+    <div class="navbar__inner">
+
+      <!-- Logo -->
+      <a href="/" class="navbar__logo">
+        Les Enseignes<span class="navbar__dot"></span>
+      </a>
+
+      <!-- Nav links -->
+      <div class="navbar__links">
+        <a href="#services" class="navbar__link">Services</a>
+        <a href="#tarifs"   class="navbar__link">Tarifs</a>
+        <a href="#avis"     class="navbar__link">Avis clients</a>
+        <a href="/services" class="navbar__link">Nos réalisations</a>
+        <a href="tel:+33123456789" class="navbar__cta">Appeler</a>
+      </div>
+
+      <!-- Mobile CTA only -->
+      <a href="tel:+33123456789" class="navbar__cta navbar__cta--mobile">Appeler</a>
+
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section
+    class="hero"
+    style="background-image: linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px); background-size: 60px 60px;"
+  >
+
+    <!-- LEFT: Text column -->
+    <div class="hero__text">
+
+      <!-- Eyebrow -->
+      <div class="hero__eyebrow fade-up" style="animation-delay: 0.1s;">
+        <span class="hero__eyebrow-text">Façades &amp; Signalétique commerciale</span>
+        <span class="hero__eyebrow-line"></span>
+      </div>
+
+      <!-- Diptych headline -->
+      <div class="hero__diptych">
+
+        <!-- Block A — negative truth -->
+        <div class="fade-up" style="animation-delay: 0.25s;">
+          <p class="hero__block-label hero__block-label--red">Ce que vous perdez</p>
+          <p class="hero__headline hero__headline--grey">
+            Une façade négligée = un client
+            <strong class="hero__headline-word--red"> perdu</strong>
+          </p>
+        </div>
+
+        <!-- Gold divider -->
+        <div class="hero__divider fade-up" style="animation-delay: 0.4s;">
+          <span class="hero__divider-dot"></span>
+          <span class="hero__divider-line"></span>
+        </div>
+
+        <!-- Block B — positive truth -->
+        <div class="fade-up" style="animation-delay: 0.45s;">
+          <p class="hero__block-label hero__block-label--gold">Ce que vous gagnez</p>
+          <p class="hero__headline hero__headline--navy">
+            Une façade soignée = une affaire qui
+            <span class="hero__headline-word--gold"> inspire confiance</span>
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Subtext -->
+      <p class="hero__subtext fade-up" style="animation-delay: 0.6s;">
+        Depuis 2008, nous fabriquons et posons des enseignes et façades qui transforment
+        l'image de votre commerce — parce que votre vitrine, c'est votre premier discours.
+      </p>
+
+      <!-- CTA row -->
+      <div class="hero__cta-row fade-up" style="animation-delay: 0.75s;">
+        <a href="#contact" class="hero__cta-primary">
+          Demander un devis gratuit
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" style="display:inline;vertical-align:middle;margin-left:8px;">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="/services" class="hero__cta-secondary">Voir nos réalisations</a>
+      </div>
+
+    </div>
+
+    <!-- RIGHT: Before/After visual -->
+    <div class="hero__visual">
+
+      <!-- Before panel -->
+      <div class="hero__panel hero__panel--before">
+        <img
+          src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=800"
+          alt="Façade avant rénovation"
+          class="hero__panel-img"
+        />
+        <span class="hero__panel-label hero__panel-label--before">Avant</span>
+      </div>
+
+      <!-- Gold diagonal rule -->
+      <div class="hero__diagonal-rule"></div>
+
+      <!-- After panel -->
+      <div class="hero__panel hero__panel--after">
+        <img
+          src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800"
+          alt="Façade après rénovation"
+          class="hero__panel-img"
+        />
+        <span class="hero__panel-label hero__panel-label--after">Après</span>
+      </div>
+
+    </div>
+
+  </section>
+
+</Layout>
+
+<style>
+  /* ── Body offset for both fixed bars ─────────────── */
+  :global(body) {
+    padding-top: 96px;
+  }
+
+  /* ── Animations ───────────────────────────────────── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-up {
+    animation: fadeUp 0.6s ease both;
+  }
+
+  /* ── Call Bar ─────────────────────────────────────── */
+  .call-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    height: 32px;
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .call-bar__inner {
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+
+  .call-bar__segment,
+  .call-bar__phone {
+    color: var(--gold);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    white-space: nowrap;
+    padding: 0 1.25rem;
+  }
+
+  .call-bar__phone {
+    text-decoration: none;
+  }
+  .call-bar__phone:hover {
+    opacity: 0.7;
+  }
+
+  .call-bar__sep {
+    width: 1px;
+    height: 14px;
+    background: rgba(201, 168, 76, 0.4);
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 767px) {
+    .md-only { display: none; }
+  }
+
+  /* ── Navbar ───────────────────────────────────────── */
+  .navbar {
+    position: fixed;
+    top: 32px;
+    left: 0;
+    right: 0;
+    z-index: 40;
+    height: 64px;
+    background: rgba(245, 245, 240, 0.96);
+    backdrop-filter: blur(4px);
+    border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+    transition: box-shadow 0.2s ease;
+  }
+
+  .navbar.is-scrolled {
+    box-shadow: 0 4px 40px rgba(26, 26, 46, 0.08);
+  }
+
+  .navbar__inner {
+    height: 100%;
+    max-width: 100%;
+    padding: 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar__logo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--navy);
+    white-space: nowrap;
+  }
+
+  .navbar__dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .navbar__links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .navbar__link {
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text);
+    transition: color 0.2s;
+    white-space: nowrap;
+  }
+  .navbar__link:hover { color: var(--gold); }
+
+  .navbar__cta {
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    background: var(--navy);
+    padding: 0.5rem 1.25rem;
+    border-radius: 0;
+    transition: background 0.2s, color 0.2s;
+    white-space: nowrap;
+  }
+  .navbar__cta:hover {
+    background: var(--gold);
+    color: var(--navy);
+  }
+
+  .navbar__cta--mobile { display: none; }
+
+  @media (max-width: 767px) {
+    .navbar__inner { padding: 0 1.25rem; }
+    .navbar__links { display: none; }
+    .navbar__cta--mobile { display: inline-block; }
+  }
+
+  @media (min-width: 768px) {
+    .navbar__cta--mobile { display: none; }
+  }
+
+  /* ── Hero ─────────────────────────────────────────── */
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: calc(100vh - 96px);
+    background-color: var(--bg);
+  }
+
+  /* LEFT — Text */
+  .hero__text {
+    padding: 5rem 2rem 5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* Eyebrow */
+  .hero__eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero__eyebrow-text {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--gold);
+    white-space: nowrap;
+  }
+
+  .hero__eyebrow-line {
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+
+  /* Diptych */
+  .hero__diptych {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero__block-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero__block-label--red  { color: #C04040; }
+  .hero__block-label--gold { color: var(--gold); }
+
+  .hero__headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+    line-height: 1.25;
+    margin: 0;
+  }
+
+  .hero__headline--grey  { color: #9B9B9B; font-style: italic; font-weight: 400; }
+  .hero__headline--navy  { color: var(--navy); font-weight: 700; }
+
+  .hero__headline-word--red  { color: #C04040; font-style: normal; font-weight: 700; }
+  .hero__headline-word--gold { color: var(--gold); }
+
+  /* Gold divider */
+  .hero__divider {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 0;
+  }
+
+  .hero__divider-dot {
+    display: block;
+    width: 5px;
+    height: 5px;
+    background: var(--gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-right: 0;
+  }
+
+  .hero__divider-line {
+    display: block;
+    flex: 1;
+    height: 1px;
+    background: rgba(201, 168, 76, 0.3);
+  }
+
+  /* Subtext */
+  .hero__subtext {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    color: var(--muted);
+    line-height: 1.65;
+    max-width: 24rem;
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+
+  /* CTA row */
+  .hero__cta-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .hero__cta-primary {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--navy);
+    background: var(--gold);
+    padding: 1rem 2rem;
+    border-radius: 0;
+    transition: background 0.2s, color 0.2s;
+    white-space: nowrap;
+  }
+  .hero__cta-primary:hover {
+    background: var(--navy);
+    color: var(--gold);
+  }
+
+  .hero__cta-secondary {
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    transition: color 0.2s;
+  }
+  .hero__cta-secondary:hover { color: var(--navy); }
+
+  /* RIGHT — Before/After visual */
+  .hero__visual {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+  }
+
+  /* Panels */
+  .hero__panel {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero__panel--before {
+    width: 45%;
+    clip-path: polygon(0 0, 100% 0, 88% 100%, 0 100%);
+    flex-shrink: 0;
+  }
+
+  .hero__panel--after {
+    width: 55%;
+    clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%);
+    margin-left: -1px; /* overlap to close any gap */
+    flex-shrink: 0;
+  }
+
+  .hero__panel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .hero__panel--before .hero__panel-img {
+    filter: saturate(0.15) brightness(0.65);
+  }
+
+  .hero__panel--after .hero__panel-img {
+    filter: saturate(1.1) brightness(1.05);
+  }
+
+  /* Panel labels */
+  .hero__panel-label {
+    position: absolute;
+    bottom: 2rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    padding: 0.25rem 0.75rem;
+  }
+
+  .hero__panel-label--before {
+    left: 1rem;
+    background: rgba(0, 0, 0, 0.6);
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .hero__panel-label--after {
+    right: 1rem;
+    background: var(--gold);
+    color: var(--navy);
+  }
+
+  /* Gold diagonal rule */
+  .hero__diagonal-rule {
+    position: absolute;
+    left: calc(45% - 1.5px);
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--gold);
+    transform: skewX(-10deg);
+    z-index: 2;
+    transform-origin: top center;
+  }
+
+  /* ── Mobile ───────────────────────────────────────── */
+  @media (max-width: 767px) {
+    .hero {
+      grid-template-columns: 1fr;
+      min-height: auto;
+    }
+
+    .hero__text {
+      padding: 3rem 1.5rem;
+      order: 1;
+    }
+
+    .hero__visual {
+      height: 260px;
+      order: 2;
+    }
+
+    .hero__cta-row {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .hero__cta-primary {
+      justify-content: center;
+    }
+
+    .hero__cta-secondary {
+      text-align: center;
+    }
+  }
+</style>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) {
+      navbar?.classList.add('is-scrolled');
+    } else {
+      navbar?.classList.remove('is-scrolled');
+    }
+  }, { passive: true });
+</script>
