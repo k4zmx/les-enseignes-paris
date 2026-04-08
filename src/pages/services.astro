@@ -3,4 +3,853 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Services — Les Enseignes">
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- SECTION 1 — PAGE HERO                  -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="shero">
+    <!-- Animated background circles -->
+    <div class="shero__circle shero__circle--outer" aria-hidden="true"></div>
+    <div class="shero__circle shero__circle--inner" aria-hidden="true"></div>
+
+    <div class="shero__content">
+      <!-- Breadcrumb -->
+      <a href="/" class="shero__back">← Retour à l'accueil</a>
+
+      <!-- Label -->
+      <div class="shero__label">
+        <span class="shero__label-line"></span>
+        <span class="shero__label-text">Nos services</span>
+        <span class="shero__label-line"></span>
+      </div>
+
+      <!-- Title -->
+      <h1 class="shero__title">
+        L'art de la <em class="shero__title-em">façade</em>,<br/>au service de votre commerce
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="shero__sub">
+        Découvrez l'ensemble de nos prestations — chaque service est conçu pour
+        renforcer l'identité visuelle de votre commerce.
+      </p>
+
+      <!-- Scroll indicator -->
+      <div class="shero__scroll" aria-hidden="true">
+        <div class="shero__scroll-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- SECTION 2 — SERVICES DETAIL            -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <!-- SERVICE 1 — Enseignes lumineuses -->
+  <!-- TODO: update pricing -->
+  <div class="srow srow--bg-navy srow--img-left reveal">
+    <div class="srow__image-side">
+      <img
+        src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200"
+        alt="Enseignes lumineuses"
+        class="srow__img"
+      />
+      <div class="srow__overlay"></div>
+      <div class="srow__corner srow__corner--tl">
+        <span class="srow__corner-h"></span>
+        <span class="srow__corner-v"></span>
+      </div>
+    </div>
+    <div class="srow__text-side">
+      <p class="srow__number">01 —</p>
+      <h2 class="srow__title">Enseignes lumineuses</h2>
+      <p class="srow__desc">
+        Des enseignes qui travaillent pour vous même quand vous dormez. LED haute
+        efficacité, caissons rétroéclairés, néon contemporain — nous concevons
+        des enseignes qui captent l'attention et résistent à l'épreuve du temps.
+      </p>
+      <ul class="srow__details">
+        <li>— Enseignes LED basse consommation</li>
+        <li>— Caissons lumineux sur mesure</li>
+        <li>— Néon flex et néon verre</li>
+        <li>— Maintenance et dépannage inclus</li>
+      </ul>
+      <div class="srow__price">
+        <span class="srow__price-label">À partir de</span>
+        <span class="srow__price-divider"></span>
+        <span class="srow__price-amount">800 €</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICE 2 — Façades & Habillage -->
+  <div class="srow srow--bg-dark srow--img-right reveal">
+    <div class="srow__text-side">
+      <p class="srow__number">02 —</p>
+      <h2 class="srow__title">Façades &amp; Habillage</h2>
+      <p class="srow__desc">
+        Votre façade est la première chose que voit un client. Nous la
+        transformons en un atout commercial — covering vinyle, bardage aluminium,
+        ravalement et peinture de façade réalisés avec soin et précision.
+      </p>
+      <ul class="srow__details">
+        <li>— Covering et habillage vinyle</li>
+        <li>— Bardage aluminium composite</li>
+        <li>— Peinture et ravalement de façade</li>
+        <li>— Nettoyage haute pression</li>
+      </ul>
+      <div class="srow__price">
+        <span class="srow__price-label">À partir de</span>
+        <span class="srow__price-divider"></span>
+        <span class="srow__price-amount">Sur devis</span>
+      </div>
+    </div>
+    <div class="srow__image-side">
+      <img
+        src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200"
+        alt="Façades et habillage"
+        class="srow__img"
+      />
+      <div class="srow__overlay"></div>
+      <div class="srow__corner srow__corner--tr">
+        <span class="srow__corner-h"></span>
+        <span class="srow__corner-v"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICE 3 — Lettres & Signalétique -->
+  <!-- TODO: update pricing -->
+  <div class="srow srow--bg-navy srow--img-left reveal">
+    <div class="srow__image-side">
+      <img
+        src="https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?w=1200"
+        alt="Lettres et signalétique"
+        class="srow__img"
+      />
+      <div class="srow__overlay"></div>
+      <div class="srow__corner srow__corner--tl">
+        <span class="srow__corner-h"></span>
+        <span class="srow__corner-v"></span>
+      </div>
+    </div>
+    <div class="srow__text-side">
+      <p class="srow__number">03 —</p>
+      <h2 class="srow__title">Lettres &amp; Signalétique</h2>
+      <p class="srow__desc">
+        Les détails font la différence. Lettres découpées en aluminium ou inox,
+        totems de signalétique, plaques professionnelles — chaque élément est
+        fabriqué dans notre atelier pour une finition irréprochable.
+      </p>
+      <ul class="srow__details">
+        <li>— Lettres découpées alu et inox</li>
+        <li>— Lettres relief rétroéclairées</li>
+        <li>— Totems et signalétique extérieure</li>
+        <li>— Plaques professionnelles gravées</li>
+      </ul>
+      <div class="srow__price">
+        <span class="srow__price-label">À partir de</span>
+        <span class="srow__price-divider"></span>
+        <span class="srow__price-amount">600 €</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICE 4 — Stores & Marquises -->
+  <!-- TODO: update pricing -->
+  <div class="srow srow--bg-dark srow--img-right reveal">
+    <div class="srow__text-side">
+      <p class="srow__number">04 —</p>
+      <h2 class="srow__title">Stores &amp; Marquises</h2>
+      <p class="srow__desc">
+        Un store banne bien choisi protège votre vitrine et affirme votre
+        identité. Nous fabriquons et posons des stores sur mesure — motorisés ou
+        manuels, avec ou sans marquage de votre nom.
+      </p>
+      <ul class="srow__details">
+        <li>— Stores bannes motorisés</li>
+        <li>— Marquises et auvents sur mesure</li>
+        <li>— Marquage et impression sur toile</li>
+        <li>— Entretien et remplacement de toile</li>
+      </ul>
+      <div class="srow__price">
+        <span class="srow__price-label">À partir de</span>
+        <span class="srow__price-divider"></span>
+        <span class="srow__price-amount">900 €</span>
+      </div>
+    </div>
+    <div class="srow__image-side">
+      <img
+        src="https://images.unsplash.com/photo-1519642918688-7e43b19245d8?w=1200"
+        alt="Stores et marquises"
+        class="srow__img"
+      />
+      <div class="srow__overlay"></div>
+      <div class="srow__corner srow__corner--tr">
+        <span class="srow__corner-h"></span>
+        <span class="srow__corner-v"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- SECTION 3 — PROCESS                    -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="process">
+    <div class="process__header">
+      <div class="process__label">
+        <span class="process__label-line"></span>
+        <span class="process__label-text">Notre processus</span>
+        <span class="process__label-line"></span>
+      </div>
+      <h2 class="process__title">De l'idée à la pose</h2>
+    </div>
+
+    <div class="process__steps">
+      <div class="process__step reveal">
+        <div class="process__num">1</div>
+        <h3 class="process__step-title">Prise de contact</h3>
+        <p class="process__step-body">
+          Appelez-nous ou envoyez un message — nous répondons sous 24h.
+        </p>
+      </div>
+      <div class="process__step reveal">
+        <div class="process__num">2</div>
+        <h3 class="process__step-title">Visite &amp; devis</h3>
+        <p class="process__step-body">
+          Nous nous déplaçons pour voir votre commerce et établir un devis gratuit.
+        </p>
+      </div>
+      <div class="process__step reveal">
+        <div class="process__num">3</div>
+        <h3 class="process__step-title">Fabrication</h3>
+        <p class="process__step-body">
+          Votre enseigne est fabriquée dans notre atelier avec les matériaux que vous avez choisis.
+        </p>
+      </div>
+      <div class="process__step reveal">
+        <div class="process__num">4</div>
+        <h3 class="process__step-title">Pose &amp; livraison</h3>
+        <p class="process__step-body">
+          Notre équipe installe votre enseigne proprement, dans les délais convenus.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- SECTION 4 — BOTTOM CTA                 -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="scta">
+    <h2 class="scta__title reveal">Votre projet mérite notre attention</h2>
+    <p class="scta__sub reveal">Devis gratuit — Réponse sous 24h</p>
+    <div class="scta__buttons reveal">
+      <a href="tel:+33123456789" class="scta__btn-primary">Appeler maintenant</a>
+      <a href="/" class="scta__btn-ghost">Retour à l'accueil</a>
+    </div>
+  </section>
+
 </Layout>
+
+<style>
+  /* ── Reveal animation ─────────────────────── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── Keyframes ────────────────────────────── */
+  @keyframes slowRotate {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to   { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+
+  @keyframes scrollLine {
+    0%   { transform: scaleY(0); transform-origin: top;    opacity: 1; }
+    50%  { transform: scaleY(1); transform-origin: top;    opacity: 1; }
+    100% { transform: scaleY(1); transform-origin: bottom; opacity: 0; }
+  }
+
+  /* ══════════════════════════════════════════ */
+  /* HERO                                       */
+  /* ══════════════════════════════════════════ */
+  .shero {
+    position: relative;
+    overflow: hidden;
+    background: var(--navy);
+    padding: 10rem 4rem 6rem;
+    text-align: center;
+  }
+
+  .shero__circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .shero__circle--outer {
+    width: 600px;
+    height: 600px;
+    border: 1px solid rgba(201, 168, 76, 0.06);
+    animation: slowRotate 30s linear infinite;
+  }
+
+  .shero__circle--inner {
+    width: 400px;
+    height: 400px;
+    border: 1px solid rgba(201, 168, 76, 0.04);
+    transform: translate(-50%, -50%);
+  }
+
+  .shero__content {
+    position: relative;
+    z-index: 1;
+    max-width: 48rem;
+    margin: 0 auto;
+  }
+
+  .shero__back {
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .shero__back:hover { color: var(--gold); }
+
+  .shero__label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .shero__label-line {
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+
+  .shero__label-text {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--gold);
+  }
+
+  .shero__title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    color: #ffffff;
+    line-height: 1.15;
+    margin: 0 0 1.5rem;
+  }
+
+  .shero__title-em {
+    font-style: italic;
+  }
+
+  .shero__sub {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.45);
+    line-height: 1.7;
+    max-width: 36rem;
+    margin: 0 auto;
+  }
+
+  .shero__scroll {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .shero__scroll-line {
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+    animation: scrollLine 2s ease-in-out infinite;
+  }
+
+  /* ══════════════════════════════════════════ */
+  /* SERVICE ROWS                               */
+  /* ══════════════════════════════════════════ */
+  .srow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 480px;
+    overflow: hidden;
+  }
+
+  .srow--bg-navy { background: #1A1A2E; }
+  .srow--bg-dark  { background: #1E1E35; }
+
+  /* Image side */
+  .srow__image-side {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .srow__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+  }
+
+  .srow__image-side:hover .srow__img {
+    transform: scale(1.04);
+  }
+
+  .srow__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(26, 26, 46, 0.35);
+    pointer-events: none;
+  }
+
+  /* Gold corner accents */
+  .srow__corner {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    pointer-events: none;
+  }
+
+  .srow__corner--tl { top: 2rem; left: 2rem; }
+  .srow__corner--tr { top: 2rem; right: 2rem; }
+
+  .srow__corner-h {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  .srow__corner-v {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 40px;
+    background: var(--gold);
+  }
+
+  .srow__corner--tl .srow__corner-h { left: 0; }
+  .srow__corner--tl .srow__corner-v { left: 0; }
+  .srow__corner--tr .srow__corner-h { right: 0; }
+  .srow__corner--tr .srow__corner-v { right: 0; }
+
+  /* Text side */
+  .srow__text-side {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .srow__number {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: var(--gold);
+    letter-spacing: 0.2em;
+    margin: 0 0 2rem;
+  }
+
+  .srow__title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+    color: #ffffff;
+    line-height: 1.2;
+    margin: 0 0 1rem;
+  }
+
+  .srow__desc {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.7;
+    margin: 0 0 2rem;
+  }
+
+  .srow__details {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .srow__details li {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.4);
+    line-height: 1.6;
+  }
+
+  .srow__price {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid rgba(201, 168, 76, 0.2);
+    padding: 0.75rem 1.25rem;
+    align-self: flex-start;
+  }
+
+  .srow__price-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  .srow__price-divider {
+    display: block;
+    width: 1px;
+    height: 1rem;
+    background: rgba(201, 168, 76, 0.2);
+    flex-shrink: 0;
+  }
+
+  .srow__price-amount {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--gold);
+  }
+
+  /* ══════════════════════════════════════════ */
+  /* PROCESS                                    */
+  /* ══════════════════════════════════════════ */
+  .process {
+    background: var(--navy);
+    border-top: 1px solid rgba(201, 168, 76, 0.1);
+    padding: 7rem 4rem;
+  }
+
+  .process__header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .process__label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .process__label-line {
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+
+  .process__label-text {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--gold);
+  }
+
+  .process__title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    color: #ffffff;
+    margin: 0;
+  }
+
+  .process__steps {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  /* Horizontal connecting line behind numbers */
+  .process__steps::before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: 12.5%;
+    right: 12.5%;
+    height: 1px;
+    background: rgba(201, 168, 76, 0.2);
+  }
+
+  .process__step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .process__num {
+    position: relative;
+    z-index: 1;
+    width: 48px;
+    height: 48px;
+    border: 1px solid rgba(201, 168, 76, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--gold);
+    background: var(--navy);
+    margin-bottom: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .process__step-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #ffffff;
+    margin: 0 0 0.75rem;
+  }
+
+  .process__step-body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.4);
+    line-height: 1.7;
+    max-width: 180px;
+    margin: 0 auto;
+  }
+
+  /* ══════════════════════════════════════════ */
+  /* BOTTOM CTA                                 */
+  /* ══════════════════════════════════════════ */
+  .scta {
+    background: #12121F;
+    padding: 6rem 4rem;
+    text-align: center;
+  }
+
+  .scta__title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    color: #ffffff;
+    margin: 0 0 1rem;
+  }
+
+  .scta__sub {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    margin: 0 0 2.5rem;
+  }
+
+  .scta__buttons {
+    display: inline-flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .scta__btn-primary {
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--navy);
+    background: var(--gold);
+    padding: 1rem 2.5rem;
+    clip-path: polygon(12px 0%, calc(100% - 12px) 0%, 100% 50%, calc(100% - 12px) 100%, 12px 100%, 0% 50%);
+    filter: drop-shadow(0 4px 24px rgba(201, 168, 76, 0.25));
+    transition: all 0.25s ease;
+  }
+  .scta__btn-primary:hover {
+    background: #ffffff;
+    color: var(--navy);
+    filter: drop-shadow(0 6px 32px rgba(201, 168, 76, 0.4));
+    transform: translateY(-2px);
+  }
+
+  .scta__btn-ghost {
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.7);
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1rem 2.5rem;
+    clip-path: polygon(12px 0%, calc(100% - 12px) 0%, 100% 50%, calc(100% - 12px) 100%, 12px 100%, 0% 50%);
+    filter: drop-shadow(0 4px 24px rgba(255, 255, 255, 0.08));
+    transition: all 0.25s ease;
+  }
+  .scta__btn-ghost:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    filter: drop-shadow(0 6px 32px rgba(201, 168, 76, 0.2));
+    transform: translateY(-2px);
+  }
+
+  /* ══════════════════════════════════════════ */
+  /* MOBILE                                     */
+  /* ══════════════════════════════════════════ */
+  @media (max-width: 767px) {
+
+    /* Hero */
+    .shero {
+      padding: 8rem 1.5rem 4rem;
+      text-align: left;
+    }
+
+    .shero__label {
+      display: flex;
+    }
+
+    /* Hide left line on mobile, keep right line only */
+    .shero__label-line:first-child {
+      display: none;
+    }
+
+    .shero__sub {
+      margin: 0;
+    }
+
+    .shero__circle--outer,
+    .shero__circle--inner {
+      width: 280px;
+      height: 280px;
+    }
+
+    /* Service rows */
+    .srow {
+      display: flex;
+      flex-direction: column;
+      min-height: auto;
+    }
+
+    /* Image always on top regardless of HTML order */
+    .srow__image-side {
+      order: -1;
+      height: 240px;
+      flex-shrink: 0;
+    }
+
+    .srow__text-side {
+      padding: 2rem 1.5rem;
+      order: 1;
+    }
+
+    .srow__price {
+      align-self: stretch;
+      justify-content: space-between;
+    }
+
+    /* Process */
+    .process {
+      padding: 4rem 1.5rem;
+    }
+
+    .process__steps {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    /* Remove horizontal connecting line on mobile */
+    .process__steps::before {
+      display: none;
+    }
+
+    .process__step {
+      align-items: flex-start;
+      text-align: left;
+      flex-direction: row;
+      gap: 1.25rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+    }
+
+    .process__step:last-child {
+      border-bottom: none;
+    }
+
+    .process__num {
+      margin-bottom: 0;
+      flex-shrink: 0;
+    }
+
+    .process__step-body {
+      max-width: none;
+      margin: 0;
+      text-align: left;
+    }
+
+    /* CTA */
+    .scta {
+      padding: 4rem 1.5rem;
+    }
+
+    .scta__buttons {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .scta__btn-primary,
+    .scta__btn-ghost {
+      text-align: center;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+</style>
+
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  document.querySelectorAll('.reveal').forEach(el => {
+    observer.observe(el);
+  });
+</script>

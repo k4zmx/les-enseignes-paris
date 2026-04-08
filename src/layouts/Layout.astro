@@ -40,6 +40,12 @@ const { title } = Astro.props;
         font-weight: 300;
         overflow-x: hidden;
       }
+
+      @media (max-width: 320px) {
+        body {
+          display: none;
+        }
+      }
     </style>
   </head>
   <body>
