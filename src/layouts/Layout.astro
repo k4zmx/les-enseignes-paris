@@ -13,6 +13,7 @@ const { title } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -73,8 +74,42 @@ const { title } = Astro.props;
       <div class="navbar__inner">
 
         <!-- Logo -->
-        <a href="/" class="navbar__logo">
-          Mat.enseigne<span class="navbar__dot"></span>
+        <a href="/" style="display:flex; align-items:center; text-decoration:none;">
+          <svg width="140" height="36" viewBox="0 0 140 36" xmlns="http://www.w3.org/2000/svg">
+
+            <!-- M geometric mark -->
+            <polygon points="0,32 5,32 5,6 0,0" fill="#C9A84C"/>
+            <polygon points="5,6 11,18 8,18 3,6" fill="#C9A84C" opacity="0.75"/>
+            <polygon points="11,18 17,6 20,6 14,18" fill="#C9A84C" opacity="0.75"/>
+            <polygon points="17,6 22,0 22,32 17,32" fill="#C9A84C"/>
+            <line x1="0" y1="35" x2="22" y2="35" stroke="#C9A84C" stroke-width="1" opacity="0.5"/>
+
+            <!-- Divider -->
+            <line x1="30" y1="4" x2="30" y2="32" stroke="#C9A84C" stroke-width="0.8" opacity="0.4"/>
+
+            <!-- "mat." in white -->
+            <text x="38" y="26"
+              font-family="'Plus Jakarta Sans', sans-serif"
+              font-weight="800"
+              font-size="18"
+              fill="#1A1A2E"
+              letter-spacing="-0.3">mat</text>
+
+            <text x="68" y="26"
+              font-family="'Plus Jakarta Sans', sans-serif"
+              font-weight="800"
+              font-size="18"
+              fill="#C9A84C">.</text>
+
+            <!-- "enseigne" in gold -->
+            <text x="74" y="26"
+              font-family="'DM Sans', sans-serif"
+              font-weight="400"
+              font-size="15"
+              fill="#C9A84C"
+              letter-spacing="0.5">enseigne</text>
+
+          </svg>
         </a>
 
         <!-- Nav links -->
