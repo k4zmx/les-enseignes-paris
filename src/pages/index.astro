@@ -2,60 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Les Enseignes">
-
-  <!-- CALL BAR -->
-  <div class="call-bar">
-    <div class="call-bar__inner">
-      <span class="call-bar__segment md-only">Devis gratuit sous 24h</span>
-      <span class="call-bar__sep md-only"></span>
-      <a href="tel:+33123456789" class="call-bar__phone">☎ 01 23 45 67 89</a>
-      <span class="call-bar__sep md-only"></span>
-      <span class="call-bar__segment md-only">Paris &amp; Île-de-France</span>
-    </div>
-  </div>
-
-  <!-- NAVBAR -->
-  <nav id="navbar" class="navbar">
-    <div class="navbar__inner">
-
-      <!-- Logo -->
-      <a href="/" class="navbar__logo">
-        Les Enseignes<span class="navbar__dot"></span>
-      </a>
-
-      <!-- Nav links -->
-      <div class="navbar__links">
-        <a href="#services" class="navbar__link">Services</a>
-        <a href="#avis"     class="navbar__link">Avis clients</a>
-        <a href="tel:+33123456789" class="navbar__cta">Appeler</a>
-      </div>
-
-      <!-- Mobile: CTA + hamburger -->
-      <div class="navbar__mobile-right">
-        <a href="tel:+33123456789" class="navbar__cta navbar__cta--mobile">Appeler</a>
-        <button
-          class="hamburger"
-          id="hamburger"
-          aria-label="Ouvrir le menu"
-          aria-expanded="false"
-        >
-          <span class="hamburger__line"></span>
-          <span class="hamburger__line"></span>
-          <span class="hamburger__line"></span>
-        </button>
-      </div>
-
-    </div>
-  </nav>
-
-  <!-- MOBILE MENU PANEL -->
-  <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
-    <nav class="mobile-menu__nav">
-      <a href="#services" class="mobile-menu__link">Services</a>
-      <a href="#avis"     class="mobile-menu__link">Avis clients</a>
-    </nav>
-  </div>
+<Layout title="Mat.enseigne">
 
   <!-- HERO -->
   <section
@@ -79,8 +26,8 @@ import Layout from '../layouts/Layout.astro';
         <div class="fade-up" style="animation-delay: 0.25s;">
           <p class="hero__block-label hero__block-label--red">Ce que vous perdez</p>
           <p class="hero__headline hero__headline--grey">
-            Une façade négligée = un client
-            <strong class="hero__headline-word--red"> perdu</strong>
+            Une vitrine négligée, c'est un client qui passe
+            <span class="hero__headline-word--red" style="font-weight:600;"> sans s'arrêter</span>
           </p>
         </div>
 
@@ -93,9 +40,9 @@ import Layout from '../layouts/Layout.astro';
         <!-- Block B — positive truth -->
         <div class="fade-up" style="animation-delay: 0.45s;">
           <p class="hero__block-label hero__block-label--gold">Ce que vous gagnez</p>
-          <p class="hero__headline hero__headline--navy">
-            Une façade soignée = une affaire qui
-            <span class="hero__headline-word--gold"> inspire confiance</span>
+          <p class="hero__headline hero__headline--navy" style="font-weight:800;">
+            Une belle façade, ça se remarque —
+            <span class="hero__headline-word--gold"> et ça rapporte</span>
           </p>
         </div>
 
@@ -103,19 +50,18 @@ import Layout from '../layouts/Layout.astro';
 
       <!-- Subtext -->
       <p class="hero__subtext fade-up" style="animation-delay: 0.6s;">
-        Depuis 2008, nous fabriquons et posons des enseignes et façades qui transforment
-        l'image de votre commerce — parce que votre vitrine, c'est votre premier discours.
+        Depuis 2008, on fabrique et on pose des enseignes pour tous types de commerces
+        — du kebab au salon de coiffure, en passant par les boutiques de luxe.
       </p>
 
-      <!-- CTA row -->
-      <div class="hero__cta-row fade-up" style="animation-delay: 0.75s;">
+      <!-- CTA -->
+      <div class="hero__cta-wrap fade-up" style="animation-delay: 0.75s;">
         <a href="#contact" class="hero__cta-primary">
           Demander un devis gratuit
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" style="display:inline;vertical-align:middle;margin-left:8px;">
             <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </a>
-        <a href="/services" class="hero__cta-secondary">Voir nos réalisations</a>
       </div>
 
     </div>
@@ -126,7 +72,7 @@ import Layout from '../layouts/Layout.astro';
       <!-- Before panel -->
       <div class="hero__panel hero__panel--before">
         <img
-          src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=800"
+          src="/before.jpeg"
           alt="Façade avant rénovation"
           class="hero__panel-img"
         />
@@ -139,7 +85,7 @@ import Layout from '../layouts/Layout.astro';
       <!-- After panel -->
       <div class="hero__panel hero__panel--after">
         <img
-          src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800"
+          src="/after.jpeg"
           alt="Façade après rénovation"
           class="hero__panel-img"
         />
@@ -240,17 +186,17 @@ import Layout from '../layouts/Layout.astro';
                 <path d="M9 18h6M10 22h4M12 2a7 7 0 0 1 7 7c0 3.5-2 6-4 7.5V18H9v-1.5C7 15 5 12.5 5 9a7 7 0 0 1 7-7z"/>
               </svg>
             </div>
-            <h3 class="svc__card-title">Enseignes lumineuses</h3>
-            <p class="svc__card-body">LED, néon, caisson lumineux — visibles de jour comme de nuit.</p>
+            <h3 class="svc__card-title">Enseignes lumineuses &amp; drapeaux</h3>
+            <p class="svc__card-body">Enseignes LED, caissons lumineux, enseignes drapeaux — visibles de jour comme de nuit, fabriquées sur mesure.</p>
           </div>
           <!-- Hover image reveal -->
           <div class="svc__card-reveal">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800" alt="" aria-hidden="true" class="svc__card-img" />
+            <img src="/ig3.png" alt="" aria-hidden="true" class="svc__card-img" />
             <div class="svc__card-overlay"></div>
             <div class="svc__card-bottom-line"></div>
             <div class="svc__card-hover-text">
-              <h3 class="svc__card-hover-title">Enseignes lumineuses</h3>
-              <p class="svc__card-hover-tag">Lumière &amp; impact visuel</p>
+              <h3 class="svc__card-hover-title">Enseignes lumineuses &amp; drapeaux</h3>
+              <p class="svc__card-hover-tag">Lumière &amp; visibilité</p>
             </div>
           </div>
         </div>
@@ -264,16 +210,16 @@ import Layout from '../layouts/Layout.astro';
                 <polyline points="9 22 9 12 15 12 15 22"/>
               </svg>
             </div>
-            <h3 class="svc__card-title">Façades &amp; Habillage</h3>
-            <p class="svc__card-body">Bardage, covering, peinture — une identité visuelle forte pour votre devanture.</p>
+            <h3 class="svc__card-title">Stores bannes</h3>
+            <p class="svc__card-body">Stores bannes sur mesure, motorisés ou manuels — protégez votre vitrine tout en affirmant votre identité.</p>
           </div>
           <div class="svc__card-reveal">
-            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800" alt="" aria-hidden="true" class="svc__card-img" />
+            <img src="/storebanner.jpeg" alt="" aria-hidden="true" class="svc__card-img" />
             <div class="svc__card-overlay"></div>
             <div class="svc__card-bottom-line"></div>
             <div class="svc__card-hover-text">
-              <h3 class="svc__card-hover-title">Façades &amp; Habillage</h3>
-              <p class="svc__card-hover-tag">Votre vitrine, réinventée</p>
+              <h3 class="svc__card-hover-title">Stores bannes</h3>
+              <p class="svc__card-hover-tag">Protection &amp; style</p>
             </div>
           </div>
         </div>
@@ -286,16 +232,16 @@ import Layout from '../layouts/Layout.astro';
                 <path d="M4 7V4h16v3M9 20h6M12 4v16"/>
               </svg>
             </div>
-            <h3 class="svc__card-title">Lettres &amp; Signalétique</h3>
-            <p class="svc__card-body">Lettres découpées, totems, plaques — chaque détail renforce votre image.</p>
+            <h3 class="svc__card-title">Marquage adhésif</h3>
+            <p class="svc__card-body">Vitrines, véhicules, panneaux publicitaires — le marquage adhésif qui fait parler de vous partout.</p>
           </div>
           <div class="svc__card-reveal">
-            <img src="https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?w=800" alt="" aria-hidden="true" class="svc__card-img" />
+            <img src="/cat3.jpeg" alt="" aria-hidden="true" class="svc__card-img" />
             <div class="svc__card-overlay"></div>
             <div class="svc__card-bottom-line"></div>
             <div class="svc__card-hover-text">
-              <h3 class="svc__card-hover-title">Lettres &amp; Signalétique</h3>
-              <p class="svc__card-hover-tag">Précision &amp; caractère</p>
+              <h3 class="svc__card-hover-title">Marquage adhésif</h3>
+              <p class="svc__card-hover-tag">Vitrines · Véhicules · Panneaux</p>
             </div>
           </div>
         </div>
@@ -311,16 +257,16 @@ import Layout from '../layouts/Layout.astro';
                 <line x1="16" y1="17" x2="16" y2="21"/>
               </svg>
             </div>
-            <h3 class="svc__card-title">Stores &amp; Marquises</h3>
-            <p class="svc__card-body">Stores bannes, marquises sur mesure — style et protection pour votre commerce.</p>
+            <h3 class="svc__card-title">Création &amp; pose sur mesure</h3>
+            <p class="svc__card-body">De la conception à la pose, nous fabriquons et installons chaque projet dans notre atelier.</p>
           </div>
           <div class="svc__card-reveal">
-            <img src="https://images.unsplash.com/photo-1519642918688-7e43b19245d8?w=800" alt="" aria-hidden="true" class="svc__card-img" />
+            <img src="/cat1.jpeg" alt="" aria-hidden="true" class="svc__card-img" />
             <div class="svc__card-overlay"></div>
             <div class="svc__card-bottom-line"></div>
             <div class="svc__card-hover-text">
-              <h3 class="svc__card-hover-title">Stores &amp; Marquises</h3>
-              <p class="svc__card-hover-tag">Élégance &amp; protection</p>
+              <h3 class="svc__card-hover-title">Création &amp; pose sur mesure</h3>
+              <p class="svc__card-hover-tag">De l'idée à la pose</p>
             </div>
           </div>
         </div>
@@ -330,7 +276,8 @@ import Layout from '../layouts/Layout.astro';
 
   </section>
 
-  <!-- TARIFS -->
+  {/* TARIFS HIDDEN — client request, uncomment to restore */}
+  {false && (
   <section id="tarifs" class="tarifs">
     <div class="tarifs__grid">
 
@@ -350,7 +297,7 @@ import Layout from '../layouts/Layout.astro';
           💬 Votre projet est unique — contactez-nous pour un devis sur mesure
           adapté à votre commerce.
         </div>
-        <a href="tel:+33123456789" class="tarifs__cta">
+        <a href="tel:+33605894411" class="tarifs__cta">
           Demander un devis gratuit →
         </a>
       </div>
@@ -422,6 +369,7 @@ import Layout from '../layouts/Layout.astro';
 
     </div>
   </section>
+  )}
 
   <!-- AVIS -->
   <section id="avis" class="avis">
@@ -521,97 +469,10 @@ import Layout from '../layouts/Layout.astro';
 
   </section>
 
-  <!-- FINAL CTA -->
-  <section class="cta-final">
-
-    <!-- Decorative ghost text -->
-    <span class="cta-final__ghost" aria-hidden="true" style="font-size: 18rem;">FAÇADE</span>
-
-    <div class="cta-final__grid">
-
-      <!-- Left column -->
-      <div class="cta-final__left">
-        <div class="cta-final__label">
-          <span class="cta-final__label-line"></span>
-          <span class="cta-final__label-text">Prêt à transformer votre commerce ?</span>
-        </div>
-        <h2 class="cta-final__title">
-          Votre façade mérite <em class="cta-final__em">mieux</em>
-        </h2>
-        <p class="cta-final__sub">
-          Chaque jour sans une façade soignée est un client qui passe sans s'arrêter.
-        </p>
-      </div>
-
-      <!-- Right column -->
-      <div class="cta-final__right">
-        <p class="cta-final__desc">
-          Nous intervenons sur toute l'Île-de-France.
-          Devis gratuit, réponse sous 24h, accompagnement de A à Z.
-        </p>
-
-        <div class="cta-final__buttons">
-          <a href="tel:+33123456789" class="cta-final__btn-primary">Appeler maintenant</a>
-          <!-- TODO: update with real email -->
-          <a href="mailto:contact@lesenseignes.fr" class="cta-final__btn-ghost">Envoyer un message</a>
-        </div>
-
-        <div class="cta-final__trust">
-          <span class="cta-final__trust-item">✓ Devis gratuit</span>
-          <span class="cta-final__trust-sep"></span>
-          <span class="cta-final__trust-item">✓ Réponse sous 24h</span>
-          <span class="cta-final__trust-sep"></span>
-          <span class="cta-final__trust-item">✓ Île-de-France</span>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer__grid">
-
-      <!-- Brand -->
-      <div class="footer__brand">
-        <p class="footer__logo">Les Enseignes</p>
-        <p class="footer__tagline">Façades &amp; Signalétique depuis 2008</p>
-      </div>
-
-      <!-- Nav -->
-      <nav class="footer__nav" aria-label="Footer navigation">
-        <a href="#services" class="footer__nav-link">Services</a>
-        <a href="#tarifs"   class="footer__nav-link">Tarifs</a>
-        <a href="#avis"     class="footer__nav-link">Avis</a>
-        <a href="tel:+33123456789" class="footer__nav-link">Contact</a>
-      </nav>
-
-      <!-- Legal -->
-      <div class="footer__legal">
-        <!-- TODO: update year dynamically -->
-        <p class="footer__copy">© 2024 Les Enseignes</p>
-        <!-- TODO: add real legal page -->
-        <a href="#" class="footer__mentions">Mentions légales</a>
-      </div>
-
-    </div>
-  </footer>
 
 </Layout>
 
 <style>
-  /* ── Body offset for both fixed bars ─────────────── */
-  :global(html) {
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-
-  :global(body) {
-    padding-top: 96px;
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-
   /* ── Animations ───────────────────────────────────── */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(20px); }
@@ -620,260 +481,6 @@ import Layout from '../layouts/Layout.astro';
 
   .fade-up {
     animation: fadeUp 0.6s ease both;
-  }
-
-  /* ── Call Bar ─────────────────────────────────────── */
-  .call-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 50;
-    height: 32px;
-    background: var(--navy);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .call-bar__inner {
-    display: flex;
-    align-items: center;
-    gap: 0;
-  }
-
-  .call-bar__segment,
-  .call-bar__phone {
-    color: var(--gold);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    white-space: nowrap;
-    padding: 0 1.25rem;
-  }
-
-  .call-bar__phone {
-    text-decoration: none;
-  }
-  .call-bar__phone:hover {
-    opacity: 0.7;
-  }
-
-  .call-bar__sep {
-    width: 1px;
-    height: 14px;
-    background: rgba(201, 168, 76, 0.4);
-    flex-shrink: 0;
-  }
-
-  @media (max-width: 767px) {
-    .md-only { display: none; }
-  }
-
-  /* ── Navbar ───────────────────────────────────────── */
-  .navbar {
-    position: fixed;
-    top: 32px;
-    left: 0;
-    right: 0;
-    z-index: 40;
-    height: 64px;
-    background: rgba(245, 245, 240, 0.96);
-    backdrop-filter: blur(4px);
-    border-bottom: 1px solid rgba(201, 168, 76, 0.2);
-    transition: box-shadow 0.2s ease;
-  }
-
-  .navbar.is-scrolled {
-    box-shadow: 0 4px 40px rgba(26, 26, 46, 0.08);
-  }
-
-  .navbar__inner {
-    height: 100%;
-    max-width: 100%;
-    padding: 0 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .navbar__logo {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    text-decoration: none;
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    font-size: 1.25rem;
-    color: var(--navy);
-    white-space: nowrap;
-  }
-
-  .navbar__dot {
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    background: var(--gold);
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
-
-  .navbar__links {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-  }
-
-  .navbar__link {
-    text-decoration: none;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.75rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--text);
-    transition: color 0.2s;
-    white-space: nowrap;
-  }
-  .navbar__link:hover { color: var(--gold); }
-
-  .navbar__cta {
-    text-decoration: none;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.75rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--gold);
-    background: var(--navy);
-    padding: 0.5rem 1.5rem;
-    white-space: nowrap;
-    clip-path: polygon(8px 0%, calc(100% - 8px) 0%, 100% 50%, calc(100% - 8px) 100%, 8px 100%, 0% 50%);
-    box-shadow: 0 4px 24px rgba(201, 168, 76, 0.25);
-    filter: drop-shadow(0 4px 24px rgba(201, 168, 76, 0.25));
-    transition: all 0.25s ease;
-  }
-  .navbar__cta:hover {
-    background: var(--gold);
-    color: var(--navy);
-    filter: drop-shadow(0 6px 32px rgba(201, 168, 76, 0.4));
-    transform: translateY(-2px);
-  }
-
-  /* Mobile-right group (CTA + hamburger) */
-  .navbar__mobile-right {
-    display: none;
-    align-items: center;
-    gap: 0.75rem;
-  }
-
-  .navbar__cta--mobile { display: inline-block; }
-
-  /* Hamburger button */
-  .hamburger {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    width: 36px;
-    height: 36px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 6px;
-    position: relative;
-    z-index: 50;
-  }
-
-  .hamburger__line {
-    display: block;
-    width: 24px;
-    height: 1px;
-    background: var(--navy);
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    transform-origin: center;
-  }
-
-  .hamburger.is-open .hamburger__line:nth-child(1) {
-    transform: translateY(6px) rotate(45deg);
-  }
-
-  .hamburger.is-open .hamburger__line:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.is-open .hamburger__line:nth-child(3) {
-    transform: translateY(-6px) rotate(-45deg);
-  }
-
-  /* Mobile menu panel */
-  .mobile-menu {
-    display: none;
-    position: fixed;
-    top: 96px;
-    left: 0;
-    right: 0;
-    background: rgba(245, 245, 240, 0.98);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(201, 168, 76, 0.2);
-    padding: 2rem 1.5rem;
-    z-index: 39;
-    opacity: 0;
-    transform: translateY(-10px);
-    pointer-events: none;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-
-  .mobile-menu.is-open {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-  }
-
-  .mobile-menu__nav {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .mobile-menu__link {
-    display: block;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: var(--navy);
-    text-decoration: none;
-    border-bottom: 1px solid rgba(26, 26, 46, 0.07);
-    padding-bottom: 1rem;
-    padding-top: 1rem;
-    transition: color 0.2s;
-  }
-
-  .mobile-menu__link:first-child {
-    padding-top: 0;
-  }
-
-  .mobile-menu__link:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-  }
-
-  .mobile-menu__link:hover {
-    color: var(--gold);
-  }
-
-  @media (max-width: 767px) {
-    .navbar__inner { padding: 0 1.25rem; }
-    .navbar__links { display: none; }
-    .navbar__mobile-right { display: flex; }
-    .mobile-menu { display: block; }
-  }
-
-  @media (min-width: 768px) {
-    .navbar__mobile-right { display: none; }
-    .mobile-menu { display: none !important; }
   }
 
   /* ── Hero ─────────────────────────────────────────── */
@@ -925,9 +532,9 @@ import Layout from '../layouts/Layout.astro';
 
   .hero__block-label {
     font-family: 'DM Sans', sans-serif;
-    font-size: 0.6rem;
+    font-size: 0.65rem;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.25em;
     margin-bottom: 0.5rem;
   }
 
@@ -935,16 +542,16 @@ import Layout from '../layouts/Layout.astro';
   .hero__block-label--gold { color: var(--gold); }
 
   .hero__headline {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: clamp(1.5rem, 2.5vw, 2.2rem);
     line-height: 1.25;
     margin: 0;
   }
 
-  .hero__headline--grey  { color: #9B9B9B; font-style: italic; font-weight: 400; }
+  .hero__headline--grey  { color: #9B9B9B; font-weight: 600; }
   .hero__headline--navy  { color: var(--navy); font-weight: 700; }
 
-  .hero__headline-word--red  { color: #C04040; font-style: normal; font-weight: 700; }
+  .hero__headline-word--red  { color: #C04040; font-weight: 700; }
   .hero__headline-word--gold { color: var(--gold); }
 
   /* Gold divider */
@@ -982,13 +589,9 @@ import Layout from '../layouts/Layout.astro';
     margin-bottom: 0;
   }
 
-  /* CTA row */
-  .hero__cta-row {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
+  /* CTA */
+  .hero__cta-wrap {
     margin-top: 2rem;
-    flex-wrap: wrap;
   }
 
   .hero__cta-primary {
@@ -1004,7 +607,7 @@ import Layout from '../layouts/Layout.astro';
     background: var(--gold);
     padding: 1rem 2.5rem;
     white-space: nowrap;
-    clip-path: polygon(12px 0%, calc(100% - 12px) 0%, 100% 50%, calc(100% - 12px) 100%, 12px 100%, 0% 50%);
+    border-radius: 6px;
     filter: drop-shadow(0 4px 24px rgba(201, 168, 76, 0.25));
     transition: all 0.25s ease;
   }
@@ -1014,17 +617,6 @@ import Layout from '../layouts/Layout.astro';
     filter: drop-shadow(0 6px 32px rgba(201, 168, 76, 0.4));
     transform: translateY(-2px);
   }
-
-  .hero__cta-secondary {
-    text-decoration: none;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--muted);
-    transition: color 0.2s;
-  }
-  .hero__cta-secondary:hover { color: var(--navy); }
 
   /* RIGHT — Before/After visual */
   .hero__visual {
@@ -1060,11 +652,11 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .hero__panel--before .hero__panel-img {
-    filter: saturate(0.15) brightness(0.65);
+    /* filter removed — displaying client photo as-is */
   }
 
   .hero__panel--after .hero__panel-img {
-    filter: saturate(1.1) brightness(1.05);
+    /* filter removed — displaying client photo as-is */
   }
 
   /* Panel labels */
@@ -1161,14 +753,7 @@ import Layout from '../layouts/Layout.astro';
       transform: translateX(-50%) skewX(-10deg);
     }
 
-    .hero__cta-row {
-      flex-direction: column;
-      width: 100%;
-      gap: 1rem;
-    }
-
-    .hero__cta-primary,
-    .hero__cta-secondary {
+    .hero__cta-primary {
       width: 100%;
       display: block;
       text-align: center;
@@ -1240,7 +825,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .why__title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 700;
     font-size: clamp(1.8rem, 3vw, 2.8rem);
     color: #ffffff;
@@ -1274,8 +859,8 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .why__item-number {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
     font-size: 0.7rem;
     color: var(--gold);
     letter-spacing: 0.15em;
@@ -1283,7 +868,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .why__item-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 700;
     font-size: 1.1rem;
     color: #ffffff;
@@ -1363,7 +948,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .svc__title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 700;
     font-size: clamp(1.8rem, 3vw, 2.8rem);
     color: var(--navy);
@@ -1416,7 +1001,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .svc__card-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 700;
     font-size: 1.15rem;
     color: var(--navy);
@@ -1480,7 +1065,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .svc__card-hover-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 700;
     font-size: 1.2rem;
     color: #ffffff;
@@ -1569,7 +1154,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .avis__title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 700;
     font-size: clamp(1.8rem, 3vw, 2.8rem);
     color: var(--navy);
@@ -1666,7 +1251,7 @@ import Layout from '../layouts/Layout.astro';
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 0.8rem;
     font-weight: 700;
     color: var(--gold);
@@ -1791,7 +1376,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .tarifs__title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 700;
     font-size: clamp(1.6rem, 2.5vw, 2.4rem);
     color: var(--navy);
@@ -1830,7 +1415,7 @@ import Layout from '../layouts/Layout.astro';
     color: var(--navy);
     background: var(--gold);
     padding: 0.75rem 2rem;
-    clip-path: polygon(12px 0%, calc(100% - 12px) 0%, 100% 50%, calc(100% - 12px) 100%, 12px 100%, 0% 50%);
+    border-radius: 6px;
     filter: drop-shadow(0 4px 24px rgba(201, 168, 76, 0.25));
     transition: all 0.25s ease;
   }
@@ -1866,7 +1451,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .tarifs__row-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 700;
     font-size: 1rem;
     color: var(--navy);
@@ -1886,7 +1471,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .tarifs__price {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 700;
     font-size: 1.3rem;
     color: var(--navy);
@@ -1944,7 +1529,7 @@ import Layout from '../layouts/Layout.astro';
     position: absolute;
     bottom: -0.15em;
     right: -0.02em;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 900;
     color: rgba(201, 168, 76, 0.04);
     line-height: 1;
@@ -1988,7 +1573,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .cta-final__title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 700;
     font-size: clamp(2rem, 3.5vw, 3.2rem);
     color: #ffffff;
@@ -1997,7 +1582,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .cta-final__em {
-    font-style: italic;
+    font-weight: 800;
     color: var(--gold);
   }
 
@@ -2044,7 +1629,7 @@ import Layout from '../layouts/Layout.astro';
     background: var(--gold);
     padding: 1rem 2.5rem;
     white-space: nowrap;
-    clip-path: polygon(12px 0%, calc(100% - 12px) 0%, 100% 50%, calc(100% - 12px) 100%, 12px 100%, 0% 50%);
+    border-radius: 6px;
     filter: drop-shadow(0 4px 24px rgba(201, 168, 76, 0.25));
     transition: all 0.25s ease;
   }
@@ -2068,7 +1653,7 @@ import Layout from '../layouts/Layout.astro';
     border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 1rem 2.5rem;
     white-space: nowrap;
-    clip-path: polygon(12px 0%, calc(100% - 12px) 0%, 100% 50%, calc(100% - 12px) 100%, 12px 100%, 0% 50%);
+    border-radius: 6px;
     filter: drop-shadow(0 4px 24px rgba(255, 255, 255, 0.08));
     transition: all 0.25s ease;
   }
@@ -2142,151 +1727,4 @@ import Layout from '../layouts/Layout.astro';
     }
   }
 
-  /* ── Footer ───────────────────────────────────────── */
-  .footer {
-    background: #12121F;
-    border-top: 1px solid rgba(201, 168, 76, 0.1);
-    padding: 2.5rem 4rem;
-  }
-
-  .footer__grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-  }
-
-  .footer__logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.4);
-    letter-spacing: 0.04em;
-    margin: 0 0 0.5rem;
-  }
-
-  .footer__tagline {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.7rem;
-    color: rgba(255, 255, 255, 0.2);
-    letter-spacing: 0.08em;
-    margin: 0;
-  }
-
-  .footer__nav {
-    display: flex;
-    flex-direction: row;
-    gap: 1.5rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .footer__nav-link {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: rgba(255, 255, 255, 0.3);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-
-  .footer__nav-link:hover {
-    color: var(--gold);
-  }
-
-  .footer__legal {
-    text-align: right;
-  }
-
-  .footer__copy {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.7rem;
-    color: rgba(255, 255, 255, 0.25);
-    letter-spacing: 0.06em;
-    margin: 0 0 0.25rem;
-  }
-
-  .footer__mentions {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.7rem;
-    color: rgba(255, 255, 255, 0.25);
-    letter-spacing: 0.06em;
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-
-  .footer__mentions:hover {
-    color: var(--gold);
-  }
-
-  /* ── Footer Mobile ────────────────────────────────── */
-  @media (max-width: 767px) {
-    .footer {
-      padding: 2rem 1.5rem;
-    }
-
-    .footer__grid {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-      text-align: center;
-    }
-
-    .footer__nav {
-      justify-content: center;
-    }
-
-    .footer__legal {
-      text-align: center;
-    }
-  }
 </style>
-
-<script>
-  // Navbar scroll shadow
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 10) {
-      navbar?.classList.add('is-scrolled');
-    } else {
-      navbar?.classList.remove('is-scrolled');
-    }
-  }, { passive: true });
-
-  // Hamburger menu
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobile-menu');
-
-  function openMenu() {
-    hamburger?.classList.add('is-open');
-    mobileMenu?.classList.add('is-open');
-    hamburger?.setAttribute('aria-expanded', 'true');
-    mobileMenu?.setAttribute('aria-hidden', 'false');
-  }
-
-  function closeMenu() {
-    hamburger?.classList.remove('is-open');
-    mobileMenu?.classList.remove('is-open');
-    hamburger?.setAttribute('aria-expanded', 'false');
-    mobileMenu?.setAttribute('aria-hidden', 'true');
-  }
-
-  hamburger?.addEventListener('click', () => {
-    const isOpen = hamburger.classList.contains('is-open');
-    isOpen ? closeMenu() : openMenu();
-  });
-
-  // Close on link click
-  mobileMenu?.querySelectorAll('.mobile-menu__link').forEach(link => {
-    link.addEventListener('click', closeMenu);
-  });
-
-  // Close on outside click
-  document.addEventListener('click', (e) => {
-    if (
-      mobileMenu?.classList.contains('is-open') &&
-      !mobileMenu.contains(e.target as Node) &&
-      !hamburger?.contains(e.target as Node)
-    ) {
-      closeMenu();
-    }
-  });
-</script>

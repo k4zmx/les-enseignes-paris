@@ -17,7 +17,7 @@ const { title } = Astro.props;
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"
       rel="stylesheet"
     />
     <style is:global>
@@ -33,12 +33,19 @@ const { title } = Astro.props;
         box-sizing: border-box;
       }
 
+      html {
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+
       body {
         background: var(--bg);
         color: var(--text);
         font-family: 'DM Sans', sans-serif;
         font-weight: 300;
         overflow-x: hidden;
+        max-width: 100%;
+        padding-top: 96px;
       }
 
       @media (max-width: 320px) {
@@ -49,6 +56,719 @@ const { title } = Astro.props;
     </style>
   </head>
   <body>
+
+    <!-- CALL BAR -->
+    <div class="call-bar">
+      <div class="call-bar__inner">
+        <span class="call-bar__segment md-only">Devis gratuit sous 24h</span>
+        <span class="call-bar__sep md-only"></span>
+        <a href="tel:+33605894411" class="call-bar__phone">☎ 06 05 89 44 11</a>
+        <span class="call-bar__sep md-only"></span>
+        <span class="call-bar__segment md-only">Paris &amp; Île-de-France</span>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav id="navbar" class="navbar">
+      <div class="navbar__inner">
+
+        <!-- Logo -->
+        <a href="/" class="navbar__logo">
+          Mat.enseigne<span class="navbar__dot"></span>
+        </a>
+
+        <!-- Nav links -->
+        <div class="navbar__links">
+          <a href="/"         class="navbar__link">Accueil</a>
+          <a href="/services" class="navbar__link">Services</a>
+          <a href="/about"    class="navbar__link">À propos</a>
+          <a href="/contact"  class="navbar__link">Contact</a>
+          <a href="tel:+33605894411" class="navbar__cta">Appeler</a>
+        </div>
+
+        <!-- Mobile: CTA + hamburger -->
+        <div class="navbar__mobile-right">
+          <a href="tel:+33605894411" class="navbar__cta navbar__cta--mobile">Appeler</a>
+          <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Ouvrir le menu"
+            aria-expanded="false"
+          >
+            <span class="hamburger__line"></span>
+            <span class="hamburger__line"></span>
+            <span class="hamburger__line"></span>
+          </button>
+        </div>
+
+      </div>
+    </nav>
+
+    <!-- MOBILE MENU PANEL -->
+    <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+      <nav class="mobile-menu__nav">
+        <a href="/"         class="mobile-menu__link">Accueil</a>
+        <a href="/services" class="mobile-menu__link">Services</a>
+        <a href="/about"    class="mobile-menu__link">À propos</a>
+        <a href="/contact"  class="mobile-menu__link">Contact</a>
+      </nav>
+    </div>
+
+    <!-- PAGE CONTENT -->
     <slot />
+
+    <!-- FINAL CTA -->
+    <section class="cta-final">
+      <span class="cta-final__ghost" aria-hidden="true" style="font-size: 18rem;">FAÇADE</span>
+      <div class="cta-final__grid">
+
+        <div class="cta-final__left">
+          <div class="cta-final__label">
+            <span class="cta-final__label-line"></span>
+            <span class="cta-final__label-text">Prêt à transformer votre commerce ?</span>
+          </div>
+          <h2 class="cta-final__title">
+            Votre façade mérite <em class="cta-final__em">mieux</em>
+          </h2>
+          <p class="cta-final__sub">
+            Chaque jour sans une façade soignée est un client qui passe sans s'arrêter.
+          </p>
+        </div>
+
+        <div class="cta-final__right">
+          <p class="cta-final__desc">
+            Nous intervenons sur toute l'Île-de-France.
+            Devis gratuit, réponse sous 24h, accompagnement de A à Z.
+          </p>
+          <div class="cta-final__buttons">
+            <a href="tel:+33605894411" class="cta-final__btn-primary">Appeler maintenant</a>
+            <!-- TODO: confirm real email with client */-->
+            <a href="mailto:contact@matenseigne.fr" class="cta-final__btn-ghost">Envoyer un message</a>
+          </div>
+          <div class="cta-final__trust">
+            <span class="cta-final__trust-item">✓ Devis gratuit</span>
+            <span class="cta-final__trust-sep"></span>
+            <span class="cta-final__trust-item">✓ Réponse sous 24h</span>
+            <span class="cta-final__trust-sep"></span>
+            <span class="cta-final__trust-item">✓ Île-de-France</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__grid">
+
+        <!-- Brand -->
+        <div class="footer__brand">
+          <p class="footer__logo-text">Mat.enseigne</p>
+          <p class="footer__tagline">Façades &amp; Signalétique depuis 2008</p>
+        </div>
+
+        <!-- Nav -->
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <a href="/services" class="footer__nav-link">Services</a>
+          <a href="/about"    class="footer__nav-link">À propos</a>
+          <a href="/contact"  class="footer__nav-link">Contact</a>
+        </nav>
+
+        <!-- Legal -->
+        <div class="footer__legal">
+          <p class="footer__copy">© 2025 Mat.enseigne</p>
+          <a href="#" class="footer__mentions">Mentions légales</a>
+        </div>
+
+      </div>
+    </footer>
+
   </body>
 </html>
+
+<style>
+  /* ── Call Bar ─────────────────────────────────────── */
+  .call-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    height: 32px;
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .call-bar__inner {
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+
+  .call-bar__segment,
+  .call-bar__phone {
+    color: var(--gold);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    white-space: nowrap;
+    padding: 0 1.25rem;
+  }
+
+  .call-bar__phone {
+    text-decoration: none;
+  }
+  .call-bar__phone:hover {
+    opacity: 0.7;
+  }
+
+  .call-bar__sep {
+    width: 1px;
+    height: 14px;
+    background: rgba(201, 168, 76, 0.4);
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 767px) {
+    .md-only { display: none; }
+  }
+
+  /* ── Navbar ───────────────────────────────────────── */
+  .navbar {
+    position: fixed;
+    top: 32px;
+    left: 0;
+    right: 0;
+    z-index: 40;
+    height: 64px;
+    background: rgba(245, 245, 240, 0.96);
+    backdrop-filter: blur(4px);
+    border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+    transition: box-shadow 0.2s ease;
+  }
+
+  .navbar.is-scrolled {
+    box-shadow: 0 4px 40px rgba(26, 26, 46, 0.08);
+  }
+
+  .navbar__inner {
+    height: 100%;
+    max-width: 100%;
+    padding: 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar__logo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--navy);
+    white-space: nowrap;
+  }
+
+  .navbar__dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .navbar__links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .navbar__link {
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text);
+    transition: color 0.2s;
+    white-space: nowrap;
+  }
+  .navbar__link:hover { color: var(--gold); }
+
+  .navbar__cta {
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    background: var(--navy);
+    padding: 0.5rem 1.5rem;
+    white-space: nowrap;
+    border-radius: 6px;
+    box-shadow: 0 4px 24px rgba(201, 168, 76, 0.25);
+    filter: drop-shadow(0 4px 24px rgba(201, 168, 76, 0.25));
+    transition: all 0.25s ease;
+  }
+  .navbar__cta:hover {
+    background: var(--gold);
+    color: var(--navy);
+    filter: drop-shadow(0 6px 32px rgba(201, 168, 76, 0.4));
+    transform: translateY(-2px);
+  }
+
+  /* Mobile-right group (CTA + hamburger) */
+  .navbar__mobile-right {
+    display: none;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .navbar__cta--mobile { display: inline-block; }
+
+  /* Hamburger button */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    position: relative;
+    z-index: 50;
+  }
+
+  .hamburger__line {
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: var(--navy);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+  }
+
+  .hamburger.is-open .hamburger__line:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .hamburger.is-open .hamburger__line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.is-open .hamburger__line:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  /* Mobile menu panel */
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 96px;
+    left: 0;
+    right: 0;
+    background: rgba(245, 245, 240, 0.98);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+    padding: 2rem 1.5rem;
+    z-index: 39;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .mobile-menu.is-open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .mobile-menu__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .mobile-menu__link {
+    display: block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--navy);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(26, 26, 46, 0.07);
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    transition: color 0.2s;
+  }
+
+  .mobile-menu__link:first-child {
+    padding-top: 0;
+  }
+
+  .mobile-menu__link:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .mobile-menu__link:hover {
+    color: var(--gold);
+  }
+
+  @media (max-width: 767px) {
+    .navbar__inner { padding: 0 1.25rem; }
+    .navbar__links { display: none; }
+    .navbar__mobile-right { display: flex; }
+    .mobile-menu { display: block; }
+  }
+
+  @media (min-width: 768px) {
+    .navbar__mobile-right { display: none; }
+    .mobile-menu { display: none !important; }
+  }
+
+  /* ── Final CTA ───────────────────────────────────── */
+  .cta-final {
+    position: relative;
+    overflow: hidden;
+    background: var(--navy);
+    padding: 7rem 4rem;
+  }
+
+  .cta-final__ghost {
+    position: absolute;
+    bottom: -0.15em;
+    right: -0.02em;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 900;
+    color: rgba(201, 168, 76, 0.04);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    pointer-events: none;
+    user-select: none;
+    white-space: nowrap;
+  }
+
+  .cta-final__grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .cta-final__label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-final__label-line {
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+
+  .cta-final__label-text {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--gold);
+  }
+
+  .cta-final__title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 3.5vw, 3.2rem);
+    color: #ffffff;
+    line-height: 1.15;
+    margin: 0;
+  }
+
+  .cta-final__em {
+    font-weight: 800;
+    color: var(--gold);
+  }
+
+  .cta-final__sub {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.7;
+    max-width: 24rem;
+    margin: 1rem 0 0;
+  }
+
+  .cta-final__right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .cta-final__desc {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .cta-final__buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .cta-final__btn-primary {
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--navy);
+    background: var(--gold);
+    padding: 1rem 2.5rem;
+    white-space: nowrap;
+    border-radius: 6px;
+    filter: drop-shadow(0 4px 24px rgba(201, 168, 76, 0.25));
+    transition: all 0.25s ease;
+  }
+
+  .cta-final__btn-primary:hover {
+    background: #ffffff;
+    color: var(--navy);
+    filter: drop-shadow(0 6px 32px rgba(201, 168, 76, 0.4));
+    transform: translateY(-2px);
+  }
+
+  .cta-final__btn-ghost {
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.7);
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1rem 2.5rem;
+    white-space: nowrap;
+    border-radius: 6px;
+    filter: drop-shadow(0 4px 24px rgba(255, 255, 255, 0.08));
+    transition: all 0.25s ease;
+  }
+
+  .cta-final__btn-ghost:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    filter: drop-shadow(0 6px 32px rgba(201, 168, 76, 0.2));
+    transform: translateY(-2px);
+  }
+
+  .cta-final__trust {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .cta-final__trust-item {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 0.08em;
+  }
+
+  .cta-final__trust-sep {
+    display: block;
+    width: 1px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 767px) {
+    .cta-final {
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+    .cta-final__ghost { font-size: 5rem !important; }
+    .cta-final__grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .cta-final__label { justify-content: center; }
+    .cta-final__sub { margin-left: auto; margin-right: auto; }
+    .cta-final__buttons { flex-direction: column; }
+    .cta-final__btn-primary,
+    .cta-final__btn-ghost { text-align: center; }
+    .cta-final__trust { justify-content: center; }
+  }
+
+  /* ── Footer ───────────────────────────────────────── */
+  .footer {
+    background: #12121F;
+    border-top: 1px solid rgba(201, 168, 76, 0.1);
+    padding: 2.5rem 4rem;
+  }
+
+  .footer__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+  }
+
+  .footer__logo-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 0.04em;
+    margin: 0 0 0.5rem;
+  }
+
+  .footer__tagline {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.2);
+    letter-spacing: 0.08em;
+    margin: 0;
+  }
+
+  .footer__nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .footer__nav-link {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer__nav-link:hover {
+    color: var(--gold);
+  }
+
+  .footer__legal {
+    text-align: right;
+  }
+
+  .footer__copy {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.25);
+    letter-spacing: 0.06em;
+    margin: 0 0 0.25rem;
+  }
+
+  .footer__mentions {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.25);
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer__mentions:hover {
+    color: var(--gold);
+  }
+
+  @media (max-width: 767px) {
+    .footer {
+      padding: 2rem 1.5rem;
+    }
+
+    .footer__grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      text-align: center;
+    }
+
+    .footer__nav {
+      justify-content: center;
+    }
+
+    .footer__legal {
+      text-align: center;
+    }
+  }
+</style>
+
+<script>
+  // Navbar scroll shadow
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) {
+      navbar?.classList.add('is-scrolled');
+    } else {
+      navbar?.classList.remove('is-scrolled');
+    }
+  }, { passive: true });
+
+  // Hamburger menu
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  function openMenu() {
+    hamburger?.classList.add('is-open');
+    mobileMenu?.classList.add('is-open');
+    hamburger?.setAttribute('aria-expanded', 'true');
+    mobileMenu?.setAttribute('aria-hidden', 'false');
+  }
+
+  function closeMenu() {
+    hamburger?.classList.remove('is-open');
+    mobileMenu?.classList.remove('is-open');
+    hamburger?.setAttribute('aria-expanded', 'false');
+    mobileMenu?.setAttribute('aria-hidden', 'true');
+  }
+
+  hamburger?.addEventListener('click', () => {
+    const isOpen = hamburger.classList.contains('is-open');
+    isOpen ? closeMenu() : openMenu();
+  });
+
+  // Close on link click
+  mobileMenu?.querySelectorAll('.mobile-menu__link').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  // Close on outside click
+  document.addEventListener('click', (e) => {
+    if (
+      mobileMenu?.classList.contains('is-open') &&
+      !mobileMenu.contains(e.target as Node) &&
+      !hamburger?.contains(e.target as Node)
+    ) {
+      closeMenu();
+    }
+  });
+</script>

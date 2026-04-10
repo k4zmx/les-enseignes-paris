@@ -1,0 +1,804 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact — Mat.enseigne">
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- SECTION 1 — PAGE HERO                  -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="chero">
+    <div class="chero__circle chero__circle--outer" aria-hidden="true"></div>
+    <div class="chero__circle chero__circle--inner" aria-hidden="true"></div>
+
+    <div class="chero__content reveal">
+
+      <div class="chero__label">
+        <span class="chero__label-line"></span>
+        <span class="chero__label-text">Contactez-nous</span>
+        <span class="chero__label-line"></span>
+      </div>
+
+      <h1 class="chero__title">Parlons de votre projet</h1>
+
+      <p class="chero__sub">
+        Devis gratuit, réponse sous 24h. On se déplace pour voir votre
+        commerce et vous proposer la meilleure solution.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- SECTION 2 — CONTACT MAIN               -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="cmain">
+    <div class="cmain__grid">
+
+      <!-- LEFT: Image -->
+      <div class="cmain__img-col">
+        <div class="cmain__img-wrap">
+
+          <img
+            src="/hold.png"
+            alt="Mat.enseigne — Nos réalisations"
+            class="cmain__img"
+          />
+
+          <!-- Gradient overlay -->
+          <div class="cmain__img-overlay" aria-hidden="true"></div>
+
+          <!-- Gold corner accent -->
+          <div class="cmain__img-corner" aria-hidden="true">
+            <span class="cmain__img-corner-h"></span>
+            <span class="cmain__img-corner-v"></span>
+          </div>
+
+          <!-- Text overlay -->
+          <div class="cmain__img-text">
+            <p class="cmain__img-label">Nos réalisations</p>
+            <p class="cmain__img-name">Mat.enseigne — Paris &amp; IDF</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RIGHT: Info cards -->
+      <div class="cmain__info-col reveal">
+
+        <div class="cinfo__cards">
+
+          <!-- Card 1: Phone -->
+          <div class="cinfo__card">
+            <div class="cinfo__icon-box">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <div class="cinfo__content">
+              <p class="cinfo__label">Téléphone</p>
+              <a href="tel:+33605894411" class="cinfo__value cinfo__value--link">06 05 89 44 11</a>
+              <p class="cinfo__sub">Disponible du lundi au samedi</p>
+            </div>
+          </div>
+
+          <!-- Card 2: Zone -->
+          <div class="cinfo__card">
+            <div class="cinfo__icon-box">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div class="cinfo__content">
+              <p class="cinfo__label">Zone d'intervention</p>
+              <p class="cinfo__value">Paris &amp; Île-de-France</p>
+              <p class="cinfo__sub">Déplacement gratuit pour devis</p>
+            </div>
+          </div>
+
+          <!-- Card 3: Instagram -->
+          <div class="cinfo__card">
+            <div class="cinfo__icon-box">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </div>
+            <div class="cinfo__content">
+              <p class="cinfo__label">Instagram</p>
+              <a
+                href="https://www.instagram.com/mat.enseigne"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="cinfo__value cinfo__value--link"
+              >@mat.enseigne</a>
+              <p class="cinfo__sub">Retrouvez nos réalisations</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Response time box -->
+        <div class="cinfo__response">
+          <div class="cinfo__response-top">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+            <span class="cinfo__response-label">Temps de réponse moyen</span>
+          </div>
+          <p class="cinfo__response-time">&lt; 24h</p>
+          <p class="cinfo__response-sub">
+            Nous rappelons ou répondons par message rapidement.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- SECTION 3 — INSTAGRAM STRIP            -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="cinsta">
+    <div class="cinsta__header reveal">
+
+      <div class="cinsta__label">
+        <span class="cinsta__label-line"></span>
+        <span class="cinsta__label-text">Nos réalisations</span>
+        <span class="cinsta__label-line"></span>
+      </div>
+
+      <h2 class="cinsta__title">Suivez-nous sur Instagram</h2>
+      <p class="cinsta__sub">@mat.enseigne — Découvrez nos derniers travaux</p>
+
+    </div>
+
+    <div class="cinsta__grid reveal">
+      <div class="cinsta__post">
+        <img src="/ig1.png" alt="" class="cinsta__img" />
+      </div>
+      <div class="cinsta__post">
+        <img src="/ig2.png" alt="" class="cinsta__img" />
+      </div>
+      <div class="cinsta__post">
+        <img src="/ig3.png" alt="" class="cinsta__img" />
+      </div>
+      <div class="cinsta__post">
+        <img src="/ig4.png" alt="" class="cinsta__img" />
+      </div>
+    </div>
+
+    <div class="cinsta__btn-wrap reveal">
+      <a
+        href="https://www.instagram.com/mat.enseigne"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="cinsta__btn"
+      >Voir notre Instagram →</a>
+    </div>
+
+  </section>
+
+</Layout>
+
+<style>
+  /* ── Scroll reveal ──────────────────────── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ══════════════════════════════════════════ */
+  /* HERO                                       */
+  /* ══════════════════════════════════════════ */
+  .chero {
+    position: relative;
+    overflow: hidden;
+    background: var(--navy);
+    padding: 10rem 4rem 6rem;
+    text-align: center;
+  }
+
+  @keyframes slowRotate {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to   { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+
+  .chero__circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .chero__circle--outer {
+    width: 500px;
+    height: 500px;
+    border: 1px solid rgba(201, 168, 76, 0.06);
+    animation: slowRotate 30s linear infinite;
+  }
+
+  .chero__circle--inner {
+    width: 350px;
+    height: 350px;
+    border: 1px solid rgba(201, 168, 76, 0.06);
+    transform: translate(-50%, -50%);
+  }
+
+  .chero__content {
+    position: relative;
+    z-index: 1;
+    max-width: 40rem;
+    margin: 0 auto;
+  }
+
+  .chero__label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .chero__label-line {
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+
+  .chero__label-text {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--gold);
+  }
+
+  .chero__title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    color: #ffffff;
+    line-height: 1.15;
+    margin: 0 0 1rem;
+  }
+
+  .chero__sub {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.45);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* ══════════════════════════════════════════ */
+  /* CONTACT MAIN                               */
+  /* ══════════════════════════════════════════ */
+  .cmain {
+    background: var(--bg);
+    padding: 6rem 4rem;
+  }
+
+  .cmain__grid {
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    gap: 4rem;
+    max-width: 72rem;
+    margin: 0 auto;
+    align-items: start;
+  }
+
+  /* ── Image column ── */
+  .cmain__img-col {
+    height: 100%;
+  }
+
+  .cmain__img-wrap {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    min-height: 500px;
+    background: var(--navy);
+  }
+
+  .cmain__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+    filter: brightness(0.92);
+  }
+
+  .cmain__img-wrap:hover .cmain__img {
+    transform: scale(1.04);
+  }
+
+  .cmain__img-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(26, 26, 46, 0.6) 0%,
+      rgba(26, 26, 46, 0.1) 50%,
+      transparent 100%
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .cmain__img-corner {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    z-index: 2;
+  }
+
+  .cmain__img-corner-h {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.7;
+  }
+
+  .cmain__img-corner-v {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 40px;
+    background: var(--gold);
+    opacity: 0.7;
+  }
+
+  .cmain__img-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1.5rem;
+    z-index: 2;
+  }
+
+  .cmain__img-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--gold);
+    margin: 0 0 0.25rem;
+  }
+
+  .cmain__img-name {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #ffffff;
+    margin: 0;
+  }
+
+  /* ── Form column ── */
+  .cmain__form-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--navy);
+    margin: 0 0 2rem;
+  }
+
+  .cform {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .cform__field {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cform__label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .cform__input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(26, 26, 46, 0.15);
+    background: #ffffff;
+    border-radius: 0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.2s ease;
+  }
+
+  .cform__input::placeholder {
+    color: rgba(26, 26, 46, 0.3);
+  }
+
+  .cform__input:focus {
+    border-color: var(--gold);
+  }
+
+  .cform__select-wrap {
+    position: relative;
+  }
+
+  .cform__select {
+    width: 100%;
+    padding: 0.75rem 2.5rem 0.75rem 1rem;
+    border: 1px solid rgba(26, 26, 46, 0.15);
+    background: #ffffff;
+    border-radius: 0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    color: var(--text);
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+  }
+
+  .cform__select:focus {
+    border-color: var(--gold);
+  }
+
+  .cform__select-arrow {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .cform__textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(26, 26, 46, 0.15);
+    background: #ffffff;
+    border-radius: 0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    color: var(--text);
+    outline: none;
+    min-height: 120px;
+    resize: vertical;
+    transition: border-color 0.2s ease;
+  }
+
+  .cform__textarea::placeholder {
+    color: rgba(26, 26, 46, 0.3);
+  }
+
+  .cform__textarea:focus {
+    border-color: var(--gold);
+  }
+
+  .cform__submit {
+    width: 100%;
+    padding: 1rem;
+    background: var(--gold);
+    color: var(--navy);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 24px rgba(201, 168, 76, 0.25);
+    transition: all 0.25s ease;
+  }
+
+  .cform__submit:hover {
+    background: var(--navy);
+    color: var(--gold);
+    box-shadow: 0 6px 32px rgba(201, 168, 76, 0.35);
+    transform: translateY(-2px);
+  }
+
+  .cform__note {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.72rem;
+    color: var(--muted);
+    text-align: center;
+    margin: 0;
+  }
+
+  /* ── Info column ── */
+  .cinfo__cards {
+    background: rgba(26, 26, 46, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  .cinfo__card {
+    background: #ffffff;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .cinfo__icon-box {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(201, 168, 76, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .cinfo__content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .cinfo__label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  .cinfo__value {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--navy);
+    margin: 0;
+  }
+
+  .cinfo__value--link {
+    text-decoration: none;
+    color: var(--navy);
+    transition: color 0.2s ease;
+  }
+
+  .cinfo__value--link:hover {
+    color: var(--gold);
+  }
+
+  .cinfo__sub {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  /* Response time box */
+  .cinfo__response {
+    margin-top: 1.5rem;
+    background: var(--navy);
+    padding: 1.5rem;
+    border-left: 3px solid var(--gold);
+  }
+
+  .cinfo__response-top {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .cinfo__response-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+  }
+
+  .cinfo__response-time {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #ffffff;
+    line-height: 1;
+    margin: 0.5rem 0 0;
+  }
+
+  .cinfo__response-sub {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.45);
+    margin: 0.5rem 0 0;
+    line-height: 1.6;
+  }
+
+  /* ══════════════════════════════════════════ */
+  /* INSTAGRAM STRIP                            */
+  /* ══════════════════════════════════════════ */
+  .cinsta {
+    background: var(--navy);
+    padding: 5rem 4rem;
+    text-align: center;
+  }
+
+  .cinsta__header {
+    margin-bottom: 2.5rem;
+  }
+
+  .cinsta__label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .cinsta__label-line {
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+
+  .cinsta__label-text {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--gold);
+  }
+
+  .cinsta__title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #ffffff;
+    margin: 0 0 0.5rem;
+  }
+
+  .cinsta__sub {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.4);
+    margin: 0;
+  }
+
+  .cinsta__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+    max-width: 56rem;
+    margin: 0 auto 2rem;
+  }
+
+  .cinsta__post {
+    aspect-ratio: 1 / 1;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(201, 168, 76, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+  }
+
+  .cinsta__post:hover {
+    border-color: rgba(201, 168, 76, 0.4);
+  }
+
+  .cinsta__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .cinsta__post:hover .cinsta__img {
+    transform: scale(1.05);
+  }
+
+  .cinsta__btn-wrap {
+    display: flex;
+    justify-content: center;
+  }
+
+  .cinsta__btn {
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--gold);
+    background: transparent;
+    border: 1px solid rgba(201, 168, 76, 0.4);
+    padding: 0.75rem 2rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+  }
+
+  .cinsta__btn:hover {
+    background: var(--gold);
+    color: var(--navy);
+    border-color: var(--gold);
+  }
+
+  /* ══════════════════════════════════════════ */
+  /* MOBILE                                     */
+  /* ══════════════════════════════════════════ */
+  @media (max-width: 767px) {
+    .chero {
+      padding: 8rem 1.5rem 4rem;
+    }
+
+    .chero__circle--outer {
+      width: 280px;
+      height: 280px;
+    }
+
+    .chero__circle--inner {
+      width: 200px;
+      height: 200px;
+    }
+
+    .cmain {
+      padding: 4rem 1.5rem;
+    }
+
+    .cmain__grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .cinsta {
+      padding: 4rem 1.5rem;
+    }
+
+    .cinsta__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>
+
+<script>
+  // ── Scroll reveal ──────────────────────────
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>

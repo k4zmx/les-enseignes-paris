@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Services — Les Enseignes">
+<Layout title="Services — Mat.enseigne">
 
   <!-- ═══════════════════════════════════════ -->
   <!-- SECTION 1 — PAGE HERO                  -->
@@ -50,7 +50,7 @@ import Layout from '../layouts/Layout.astro';
   <div class="srow srow--bg-navy srow--img-left reveal">
     <div class="srow__image-side">
       <img
-        src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200"
+        src="/ig3.png"
         alt="Enseignes lumineuses"
         class="srow__img"
       />
@@ -74,11 +74,6 @@ import Layout from '../layouts/Layout.astro';
         <li>— Néon flex et néon verre</li>
         <li>— Maintenance et dépannage inclus</li>
       </ul>
-      <div class="srow__price">
-        <span class="srow__price-label">À partir de</span>
-        <span class="srow__price-divider"></span>
-        <span class="srow__price-amount">800 €</span>
-      </div>
     </div>
   </div>
 
@@ -98,15 +93,10 @@ import Layout from '../layouts/Layout.astro';
         <li>— Peinture et ravalement de façade</li>
         <li>— Nettoyage haute pression</li>
       </ul>
-      <div class="srow__price">
-        <span class="srow__price-label">À partir de</span>
-        <span class="srow__price-divider"></span>
-        <span class="srow__price-amount">Sur devis</span>
-      </div>
     </div>
     <div class="srow__image-side">
       <img
-        src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200"
+        src="/storebanner.jpeg"
         alt="Façades et habillage"
         class="srow__img"
       />
@@ -123,7 +113,7 @@ import Layout from '../layouts/Layout.astro';
   <div class="srow srow--bg-navy srow--img-left reveal">
     <div class="srow__image-side">
       <img
-        src="https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?w=1200"
+        src="/cat3.jpeg"
         alt="Lettres et signalétique"
         class="srow__img"
       />
@@ -147,11 +137,6 @@ import Layout from '../layouts/Layout.astro';
         <li>— Totems et signalétique extérieure</li>
         <li>— Plaques professionnelles gravées</li>
       </ul>
-      <div class="srow__price">
-        <span class="srow__price-label">À partir de</span>
-        <span class="srow__price-divider"></span>
-        <span class="srow__price-amount">600 €</span>
-      </div>
     </div>
   </div>
 
@@ -172,15 +157,10 @@ import Layout from '../layouts/Layout.astro';
         <li>— Marquage et impression sur toile</li>
         <li>— Entretien et remplacement de toile</li>
       </ul>
-      <div class="srow__price">
-        <span class="srow__price-label">À partir de</span>
-        <span class="srow__price-divider"></span>
-        <span class="srow__price-amount">900 €</span>
-      </div>
     </div>
     <div class="srow__image-side">
       <img
-        src="https://images.unsplash.com/photo-1519642918688-7e43b19245d8?w=1200"
+        src="/cat1.jpeg"
         alt="Stores et marquises"
         class="srow__img"
       />
@@ -237,17 +217,6 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════ -->
-  <!-- SECTION 4 — BOTTOM CTA                 -->
-  <!-- ═══════════════════════════════════════ -->
-  <section class="scta">
-    <h2 class="scta__title reveal">Votre projet mérite notre attention</h2>
-    <p class="scta__sub reveal">Devis gratuit — Réponse sous 24h</p>
-    <div class="scta__buttons reveal">
-      <a href="tel:+33123456789" class="scta__btn-primary">Appeler maintenant</a>
-      <a href="/" class="scta__btn-ghost">Retour à l'accueil</a>
-    </div>
-  </section>
 
 </Layout>
 
@@ -352,7 +321,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .shero__title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 700;
     font-size: clamp(2.2rem, 5vw, 4rem);
     color: #ffffff;
@@ -361,7 +330,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .shero__title-em {
-    font-style: italic;
+    font-weight: 800;
   }
 
   .shero__sub {
@@ -467,9 +436,8 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .srow__number {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-weight: 400;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
     font-size: 0.75rem;
     color: var(--gold);
     letter-spacing: 0.2em;
@@ -477,7 +445,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .srow__title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 700;
     font-size: clamp(1.6rem, 2.5vw, 2.4rem);
     color: #ffffff;
@@ -507,38 +475,6 @@ import Layout from '../layouts/Layout.astro';
     font-size: 0.85rem;
     color: rgba(255, 255, 255, 0.4);
     line-height: 1.6;
-  }
-
-  .srow__price {
-    display: inline-flex;
-    align-items: center;
-    gap: 1rem;
-    border: 1px solid rgba(201, 168, 76, 0.2);
-    padding: 0.75rem 1.25rem;
-    align-self: flex-start;
-  }
-
-  .srow__price-label {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.65rem;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: rgba(255, 255, 255, 0.3);
-  }
-
-  .srow__price-divider {
-    display: block;
-    width: 1px;
-    height: 1rem;
-    background: rgba(201, 168, 76, 0.2);
-    flex-shrink: 0;
-  }
-
-  .srow__price-amount {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: var(--gold);
   }
 
   /* ══════════════════════════════════════════ */
@@ -579,7 +515,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .process__title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 700;
     font-size: clamp(1.8rem, 3vw, 2.8rem);
     color: #ffffff;
@@ -620,8 +556,8 @@ import Layout from '../layouts/Layout.astro';
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
     font-size: 0.9rem;
     color: var(--gold);
     background: var(--navy);
@@ -630,7 +566,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .process__step-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 700;
     font-size: 1rem;
     color: #ffffff;
@@ -644,83 +580,6 @@ import Layout from '../layouts/Layout.astro';
     line-height: 1.7;
     max-width: 180px;
     margin: 0 auto;
-  }
-
-  /* ══════════════════════════════════════════ */
-  /* BOTTOM CTA                                 */
-  /* ══════════════════════════════════════════ */
-  .scta {
-    background: #12121F;
-    padding: 6rem 4rem;
-    text-align: center;
-  }
-
-  .scta__title {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    font-size: clamp(1.8rem, 3vw, 2.8rem);
-    color: #ffffff;
-    margin: 0 0 1rem;
-  }
-
-  .scta__sub {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: var(--gold);
-    margin: 0 0 2.5rem;
-  }
-
-  .scta__buttons {
-    display: inline-flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .scta__btn-primary {
-    display: inline-block;
-    text-decoration: none;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.8rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--navy);
-    background: var(--gold);
-    padding: 1rem 2.5rem;
-    clip-path: polygon(12px 0%, calc(100% - 12px) 0%, 100% 50%, calc(100% - 12px) 100%, 12px 100%, 0% 50%);
-    filter: drop-shadow(0 4px 24px rgba(201, 168, 76, 0.25));
-    transition: all 0.25s ease;
-  }
-  .scta__btn-primary:hover {
-    background: #ffffff;
-    color: var(--navy);
-    filter: drop-shadow(0 6px 32px rgba(201, 168, 76, 0.4));
-    transform: translateY(-2px);
-  }
-
-  .scta__btn-ghost {
-    display: inline-block;
-    text-decoration: none;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: rgba(255, 255, 255, 0.7);
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 1rem 2.5rem;
-    clip-path: polygon(12px 0%, calc(100% - 12px) 0%, 100% 50%, calc(100% - 12px) 100%, 12px 100%, 0% 50%);
-    filter: drop-shadow(0 4px 24px rgba(255, 255, 255, 0.08));
-    transition: all 0.25s ease;
-  }
-  .scta__btn-ghost:hover {
-    border-color: var(--gold);
-    color: var(--gold);
-    filter: drop-shadow(0 6px 32px rgba(201, 168, 76, 0.2));
-    transform: translateY(-2px);
   }
 
   /* ══════════════════════════════════════════ */
@@ -772,11 +631,6 @@ import Layout from '../layouts/Layout.astro';
       order: 1;
     }
 
-    .srow__price {
-      align-self: stretch;
-      justify-content: space-between;
-    }
-
     /* Process */
     .process {
       padding: 4rem 1.5rem;
@@ -816,23 +670,6 @@ import Layout from '../layouts/Layout.astro';
       text-align: left;
     }
 
-    /* CTA */
-    .scta {
-      padding: 4rem 1.5rem;
-    }
-
-    .scta__buttons {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-    }
-
-    .scta__btn-primary,
-    .scta__btn-ghost {
-      text-align: center;
-      width: 100%;
-      box-sizing: border-box;
-    }
   }
 </style>
 
